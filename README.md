@@ -97,7 +97,7 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
   <img src="Images/transformed_contents.png">
 
 Refer to the below notebook to see transformations in Databricks with Visualisation (Vis can be seen in Databricks not able to download file in PDF like format).
-[Tokyo Olympics Transformation.ipynb](https://github.com/nilesh170/Tokyo-Olympic-Azure-Data-Engineering-Project/blob/main/Tokyo.ipynb)
+[Tokyo_Databricks.ipynb](https://github.com/nilesh170/Tokyo-Olympic-Azure-Data-Engineering-Project/blob/main/Tokyo.ipynb)
 
 ## Setting Up and Using Azure Synapse Analytics
 ##### 1. Setting the Stage for Analytics:
