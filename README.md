@@ -47,7 +47,7 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
 
 ##### 3. Building the Data Pipeline:
 - Create a new data integration pipeline to automate the data transfer process.
-- Use "Copy Data" task to efficiently move data between different sources and destinations.
+- Use the "Copy Data" task to efficiently move data between different sources and destinations.
 
 ##### 4. Connecting to GitHub:
 - Configure the data source using an HTTP template to enable data retrieval from the GitHub repository.
@@ -60,7 +60,7 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
 - Repeat the configuration steps for each dataset to transfer them all into the designated storage location.
 
 ##### 7. Executing the Pipeline:
-- Connect the copy data activities together to create a cohesive workflow.
+- Connect the copy data activities to create a cohesive workflow.
 - Trigger the pipeline to initiate the data transfer process.
 
 ##### 8. Validating Data Transfer:
@@ -72,7 +72,7 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
 ## Data Transformation using Azure Databricks
 ##### 1. Setting Up Databricks Workspace:
 - Launch Azure Databricks within the Azure portal.
-- Create a new workspace in databricks specifically for this project within the resource group.
+- Create a new workspace in Databricks specifically for this project within the resource group.
 
 ##### 2. Allocating Computing Resources:
 - Configure Databricks clusters to provide the necessary computing power for data processing tasks.
@@ -84,7 +84,7 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
 ##### 4. Connecting to Data Lake Storage:
 - Establish a secure connection to Azure Data Lake Storage (ADLS) Gen2 using provided credentials (Client ID, Tenant ID, Secret).
 - Write the code within the Databricks notebook to mount ADLS Gen2.
-- Or Use DBFS file system to mount the data from ADLS Gen2.
+- Or Use the DBFS file system to mount the data from ADLS Gen2.
 
 ##### 5. Transforming the Data:
 - Implement necessary data transformations within the notebook, addressing any cleaning, formatting, or structural changes required for analysis.
@@ -96,21 +96,21 @@ Source(Kaggle): [2021 Olympics in Tokyo](https://www.kaggle.com/datasets/arjunpr
  <img src="Images/transformed_tables.png">
   <img src="Images/transformed_contents.png">
 
-Refer below notebook to transformations and code used to mount ADLS Gen2 to Databricks.
-[Tokyo Olympics Transformation.ipynb]()
+Refer to the below notebook to see transformations in Databricks with Visualisation (Vis can be seen in Databricks not able to download file in PDF like format).
+[Tokyo Olympics Transformation.ipynb](https://github.com/nilesh170/Tokyo-Olympic-Azure-Data-Engineering-Project/blob/main/Tokyo.ipynb)
 
 ## Setting Up and Using Azure Synapse Analytics
 ##### 1. Setting the Stage for Analytics:
-- Begin by establishing a Synapse Analytics workspace, a powerful platform for unified data analytics. Think of it as your command center for exploring the Olympic data.
+- Establish a Synapse Analytics workspace, a powerful platform for unified data analytics. Think of it as your command center for exploring the Olympic data.
 
 ##### 2. Constructing a Data Lake Database:
 - Within the workspace, venture into the "Data" section and select "Lake Database."
-Create a new database named "TokyoOlympicDB" to serve as a well-organized repository for your transformed Olympic data.
+Create a new " TokyoOlympicDB " database to serve as a well-organized repository for your transformed Olympic data.
 
 ##### 3. Bringing Data to the Table:
 - To make the transformed data easily accessible for analysis, create tables directly from the "Transformed Data" folder residing within your ADLS Gen2 storage. This seamlessly integrates the data into your Synapse workspace.
  <img src="Images/synapse_db_creation.png">
 
 ##### 4. Connect with PowerBI:
- - You can use the notebooks provided by the Synapse to run SQL queries or Connect with PowerBI to generate visuals related to the data.
- - For this you need to make connection from Synapse to PowerBI and give access to data to PowerBI.
+ - You can use the notebooks provided by Synapse to run SQL queries or Connect with PowerBI to generate visuals related to the data.
+ - For this, you need to make the connection from Synapse to PowerBI and give access to data to PowerBI.
